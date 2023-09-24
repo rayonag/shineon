@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import liff from "@line/liff";
 import "./App.css";
 
+// /dist/index.js のリンクを/shineon/ にするのを忘れない
 function App() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
