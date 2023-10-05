@@ -1,0 +1,19 @@
+.opening {
+  font-size: 4rem;
+  padding-top: 15%;
+  animation: fadeOut 0.5s;
+  animation-delay: 4.4s;
+  animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  width: 6.5em
+}
+
+/*** 1文字ずつ出現するアニメーション ***/
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
