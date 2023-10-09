@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import clsx from "clsx";
 import "./loading.css";
-import { Caveat } from "@next/font/google";
+import { Caveat } from "next/font/google";
 
 const caveat = Caveat({ subsets: ["latin"] });
 export default function Loading ():React.ReactNode {
