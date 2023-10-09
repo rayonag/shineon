@@ -65,13 +65,13 @@ const Component = () => {
         "#photo",
         {
           //toの設定
-          x: () => -(document.querySelector("#photo").clientWidth * 5),
+          x: () => -(document.querySelector("#photo").clientWidth * 6),
           y: 0,
           duration: 2,
           scrollTrigger: {
             trigger: "#photogallery",
             start: "top 10%",
-            end: () => `+=${document.querySelector("#photo").clientWidth * 4}`,
+            end: () => `+=${document.querySelector("#photo").clientWidth * 5}`,
             scrub: 2.5,
             pin: true,
             anticipatePin: 0.5,
@@ -129,21 +129,21 @@ const Component = () => {
 
   return (
     <>
-      <div id="title1" className="text-center text-3xl my-60">
+      <div id="title1" className="text-center text-2xl my-60">
         <p>神のなさることは、</p>
         <p>すべて時にかなって美しい</p>
       </div>
       <div className="scrolldown4"><span>Scroll</span></div>
-      <div id="title2" className="text-center text-3xl my-96">
+      <div id="title2" className="text-center text-2xl my-96">
         <p>今あたえられているお仕事が</p>
         <p>これからさらに主に用いられるように</p>
       </div>
-      <div id="title3" className="text-center text-3xl my-96">
+      <div id="title3" className="text-center text-2xl my-96">
         <p>いまはまだ</p>
         <p>学んでいることをアウトプットする</p>
         <p>遊び場のような</p>
       </div>
-      <div id="title4" className="text-center text-3xl my-96">
+      <div id="title4" className="text-center text-2xl my-96">
         <p>たとえばフォトギャラリーをつくって</p>
         <p>イスラエルのことを発信したり</p>
       </div>
@@ -158,7 +158,7 @@ const Component = () => {
             {/* <Image src={Excursion}></Image> */}
           </div></div>
       </section>
-      <div id="title5" className="text-center text-3xl my-96">
+      <div id="title5" className="text-center text-2xl my-96">
         <p>まだまだ発展途上</p>
         <p>これから育てていくんだ</p>
       </div>
