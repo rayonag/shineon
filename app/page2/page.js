@@ -130,7 +130,7 @@ const Component = () => {
   return (
     <>
       <div id="title1" className="text-center text-2xl my-60">
-        <p>神のなさることは、</p>
+        <p>神のなさることは</p>
         <p>すべて時にかなって美しい</p>
       </div>
       <div className="scrolldown4"><span>Scroll</span></div>
