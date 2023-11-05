@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 
 import Loading from "./loading/page";
-import Component from "./page2/page";
+import Component from "./home/page";
 import "./page.css";
 
 const inter = Inter({

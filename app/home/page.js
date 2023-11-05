@@ -4,7 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { useRef, useEffect, useLayoutEffect } from "react";
-import './page2.css'
+import './home.css'
 
 import Image from "next/image";
 import Caesarea from "./../../public/photos/Caesarea Maritima_Maddie Hunt31.webp"
@@ -13,6 +13,7 @@ import OldCity from "./../../public/photos/OldCity_MaddieHuntPhoto1.webp"
 import Promenade from "./../../public/photos/promenade.webp"
 import NimrodsFortress from "./../../public/photos/Nimrods Fortress_Maddie Hunt65 (1).jpg"
 import Excursion from "./../../public/photos/excursion.jpg"
+import Link from "next/link";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -129,6 +130,7 @@ const Component = () => {
 
   return (
     <>
+      <Link href="/vocabs">New Vocubuary App</Link>
       <div id="title1" className="text-center text-2xl my-60">
         <p>神のなさることは、</p>
         <p>すべて時にかなって美しい</p>
