@@ -142,7 +142,8 @@ const Component = () => {
       </div>
       <div id="title3" className="text-center text-2xl my-96">
         <p>いまはまだ</p>
-        <p>学んでいることをアウトプットする</p>
+        <p>学んでいることを</p>
+        <p>アウトプットする</p>
         <p>遊び場のような</p>
       </div>
       <div id="title4" className="text-center text-2xl my-96">
