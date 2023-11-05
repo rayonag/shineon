@@ -1,17 +1,29 @@
+"use client"
+// src/App.jsx
+import { useEffect, useState } from "react";
+import Home from "./components/Home";
+import Login from "./components/Login";
 
+import { supabase } from "./../../utils/supabaseClient"
 
-import { supabase } from '../../utils/supabaseClient'
-import Auth from './components/Auth'
-import Account from './components/Account'
+const App = () => {
+    const [session, setSession] = useState(null);
 
+    useEffect(() => {
+        setSession(supabase.auth.getSession());
 
-export default async function Home() {
-    const { data, error } = await supabase.auth.getSession();
-    const { session, user } = data
+        supabase.auth.onAuthStateChange((event, session) => {
+            setSession(session);
+        });
+    }, []);
 
     return (
-        <div className="container" style={{ padding: '50px 0 100px 0' }}>
-            {!session ? <Auth /> : <Account key={session.user.id} session={session} />}
+        <div
+            style={{ minWidth: "100vw", minHeight: "100vh", backgroundColor: "#F5F5F5", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}
+        >
+            {session ? <Home /> : <Login />}
         </div>
-    )
-}
+    );
+};
+
+export default App;
