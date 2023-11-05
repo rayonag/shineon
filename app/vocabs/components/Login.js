@@ -1,9 +1,9 @@
 "use client"
 import Head from 'next/head';
 // src/Login.jsx
-import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
+import { Auth } from '@supabase/auth-ui-react'
 import { supabase } from "../../../utils/supabaseClient"
-
+import { ThemeSupa } from '@supabase/auth-ui-shared';
 
 const Login = () => {
 
@@ -21,7 +21,7 @@ const Login = () => {
                         <Auth
                             supabaseClient={supabase}
                             appearance={{ theme: ThemeSupa }}
-                            providers={['google']}
+                            providers={['google','email']}
                         />
                     </div>
                 </main>
