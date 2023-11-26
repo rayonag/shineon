@@ -5,25 +5,18 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 
-import Loading from "./loading/page";
-import Component from "./home/page";
+import Loading from "./home/loading/Loading";
+import Home from "./home/page";
 import "./page.css";
 
 const inter = Inter({
-  subsets: ["latin"],
+    subsets: ["latin"],
 });
 
-export default function Home(): React.ReactNode {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-  }, []);
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {isLoading ? <Loading /> : <Component />}
-    </main>
-  );
+export default function App(): React.ReactNode {
+    return (
+        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            <Home />
+        </main>
+    );
 }

@@ -1,36 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 /*スクロールダウン全体の場所*/
-.scrolldown4{
+.scrolldown4 {
     /*描画位置※位置は適宜調整してください*/
-  position:absolute;
-  bottom:10%;
-  right:50%;
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
     /*矢印の動き1秒かけて永遠にループ*/
-  animation: arrowmove 1s ease-in-out infinite;
+    animation: arrowmove 1s ease-in-out infinite;
 }
 
 /*下からの距離が変化して全体が下→上→下に動く*/
-@keyframes arrowmove{
-      0%{bottom:10%;}
-      50%{bottom:13%;}
-     100%{bottom:10%;}
- }
+@keyframes arrowmove {
+    0% {
+        bottom: 10%;
+    }
+    50% {
+        bottom: 13%;
+    }
+    100% {
+        bottom: 10%;
+    }
+}
 
 /*Scrollテキストの描写*/
-.scrolldown4 span{
+.scrolldown4 span {
     /*描画位置*/
-  position: absolute;
-  left:-20px;
-  bottom:10px;
+    position: absolute;
+    left: -20px;
+    bottom: 10px;
     /*テキストの形状*/
-  color: #eee;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  /*縦書き設定*/
-  -ms-writing-mode: tb-rl;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
 }
@@ -49,158 +56,158 @@
     transform: skewX(-31deg);
 }
 
-.scrolldown4:after{
-  content:"";
+.scrolldown4:after {
+    content: "";
     /*描画位置*/
-  position: absolute;
-  bottom:0;
-  right:0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     /*矢印の形状*/
-  width:1px;
-  height: 50px;
-  background:#eee;
+    width: 1px;
+    height: 50px;
+    background: #eee;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 ul,
 li {
-  list-style: none;
+    list-style: none;
 }
 
 body {
-  background-color: #eeebdd;
-  color: #1b1717;
-  font-family: Avenir, 'Helvetica neue', Helvetica, sans-serif;
+    background-color: #eeebdd;
+    color: #1b1717;
+    font-family: Avenir, "Helvetica neue", Helvetica, sans-serif;
 }
 
 /* 共通 */
 .section {
-  width: 100%;
-  padding: 100px 0;
+    width: 100%;
+    padding: 100px 0;
 }
 .container {
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .heading {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
 }
 
 /* タイトル */
 .title {
-  padding: 200px 0 20px;
-  font-size: 52px;
-  text-align: center;
+    padding: 200px 0 20px;
+    font-size: 52px;
+    text-align: center;
 }
 
 /* 普通のセクション */
 .normal-text {
-  font-size: 20px;
-  letter-spacing: 0.08em;
-  margin-top: 60px;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin-top: 60px;
 }
 
 /* 横スクロールセクション */
 .side-scroll {
-  background-color: #1b1717;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #1b1717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .side-scroll-heading {
-  color: #eeebdd;
+    color: #eeebdd;
 }
 
 .side-scroll-list-wrapper {
-  position: relative;
-  width: 100%;
-  height: 700px;
+    position: relative;
+    width: 100%;
+    height: 700px;
 }
 
 .side-scroll-list {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  display: flex;
-  gap: 0 60px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    gap: 0 60px;
 }
 
 .side-scroll-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 420px;
-  background-color: #eeebdd;
-  color: #1b1717;
-  font-size: 32px;
-  font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 420px;
+    background-color: #eeebdd;
+    color: #1b1717;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .side-scroll-item + .side-scroll-item {
-  margin-left: 60px;
+    margin-left: 60px;
 }
 :root {
-	--dark: #1d1d1d;
-	--light: #fff;
-	--green: #28a92b;
-  --purple: #8d3dae;
-  height: 5000px;
+    --dark: #1d1d1d;
+    --light: #fff;
+    --green: #28a92b;
+    --purple: #8d3dae;
+    height: 5000px;
 }
 .js-demo-sections {
     min-height: 100vh;
 }
 
 body {
-	background-color: var(--dark);
-	color: var(--light);
-	font-family: "Signika Negative", sans-serif;
-	margin: 0;
-  padding: 0;
-  height: 100vh;
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: "Signika Negative", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .box {
-	width: 100px;
-	height: 100px;
-  border-radius: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background-color: var(--green);
-	font-weight: 600;
-	color: var(--light);
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--green);
+    font-weight: 600;
+    color: var(--light);
 }
 
 .circle {
-	width: 100px;
-	height: 100px;
-  border-radius: 99%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background-color: var(--purple);
-	font-weight: 600;
-	color: var(--light);
+    width: 100px;
+    height: 100px;
+    border-radius: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--purple);
+    font-weight: 600;
+    color: var(--light);
 }
 .d-demo__elem--color1 {
     color: #28a92b;
 }
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
 }
