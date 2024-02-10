@@ -23,6 +23,5 @@
         }
     },
 
-    "include": ["utils/*.ts", "next-env.d.ts", "app/**/*.ts", "app/**/*.tsx", ".next/types/**/*.ts", "utils/supabaseClient.ts"],
     "exclude": ["node_modules"]
 }
