@@ -23,20 +23,22 @@ const Home = () => {
     // 初回のみローディングアニメーション実行
     const [isLoading, setIsLoading] = useState(false);
 
-    const loadingAnimation = () => {
-        //セッションストレージで初回訪問かどうかを判定
-        const data = sessionStorage.getItem("first accessed");
-        // 初回訪問でなければ処理を終了
-        if (data === "true") return;
-        //初回訪問ならisLoadingをtrueに
-        setIsLoading(true);
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 5000);
-        //セッションストレージにtrueをセット
-        sessionStorage.setItem("first accessed", "true");
-    };
-    loadingAnimation();
+    useEffect(() => {
+        const loadingAnimation = () => {
+            //セッションストレージで初回訪問かどうかを判定
+            const data = window.sessionStorage.getItem("first accessed");
+            // 初回訪問でなければ処理を終了
+            if (data === "true") return;
+            //初回訪問ならisLoadingをtrueに
+            setIsLoading(true);
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 5000);
+            //セッションストレージにtrueをセット
+            window.sessionStorage.setItem("first accessed", "true");
+        };
+        loadingAnimation();
+    }, []);
 
     useEffect(() => {
         const photoElem = document.querySelector("#photo");

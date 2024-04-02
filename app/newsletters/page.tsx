@@ -1,4 +1,12 @@
+import CheckArchive from './components/CheckArchive';
+import CheckLatest from './components/CheckLatest';
+
 const Newsletters = () => {
-    return <div className=" items-center justify-center text-6xl">コンテンツを鋭意製作中！</div>;
+    return (
+        <div className="h-screen w-full bg-blue-100 flex flex-col items-center justify-center">
+            <CheckLatest />
+            <CheckArchive />
+        </div>
+    );
 };
 export default Newsletters;

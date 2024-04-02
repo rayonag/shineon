@@ -3,25 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: gray;
+    --background-end-rgb: black;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 0, 0, 0;
+        --background-start-rgb: 253, 251, 250;
+        --background-end-rgb: 253, 251, 250;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.button {
+    @apply rounded-full shadow-md;
+    @apply m-4 p-4;
+    @apply transition duration-300 ease-in-out;
+}
+
+.blue-green-gradient-button {
+    @apply button;
+    @apply bg-gradient-to-r from-blue-500 to-cyan-400 hover:opacity-70;
+    @apply text-white text-center;
+}
+.white-button {
+    @apply button;
+    @apply bg-gray-400 hover:opacity-70;
+    @apply text-white text-center;
+}
+.blue-button {
+    @apply button;
+    @apply bg-blue-800 hover:bg-blue-700;
+    @apply text-white text-center;
 }
