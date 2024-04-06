@@ -1,5 +1,6 @@
 'use client';
 import { supabase } from '@/utils/supabaseClient';
+import Link from 'next/link';
 import { FC, memo, use, useEffect, useRef, useState } from 'react';
 
 type EditProps = {
@@ -272,15 +273,20 @@ const Settings = () => {
         );
     };
     return (
-        <div className="min-h-screen h-auto w-full text-gray-300 bg-gradient-to-r from-blue-900 to-gray-800 justify-center content-center items-center">
+        <div className="min-h-screen h-auto w-full py-5 text-gray-300 bg-gradient-to-r from-blue-900 to-gray-800 justify-center content-center items-center">
             {authUser ? (
                 <div>
                     <div className={loadingState} aria-label="読み込み中">
                         <div className="animate-spin h-10 w-10 border-4 border-blue-500 rounded-full border-t-transparent"></div>
                     </div>
                     <div>
-                        <div className="m-5 text-5xl flex flex-wraps">
-                            <h1 className="text-gray-100 text-3xl font-bold mb-4">Admin Console for SHINE ON!</h1>
+                        <div className="m-5 flex flex-wraps">
+                            <h1 className="text-gray-100 text-2xl font-bold mb-4">Admin Console for SHINE ON!</h1>
+                        </div>
+                        <div className="p-5">
+                            <Link href="/newsletters" className="white-button">
+                                Go to Newsletters →
+                            </Link>
                         </div>
                         <section>
                             <div className="m-5 text-3xl border-b flex flex-wrap">最新号</div>
