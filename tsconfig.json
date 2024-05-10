@@ -23,5 +23,5 @@
         "resolveJsonModule": true
     },
     "exclude": ["node_modules"],
-    "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "app/game/jigsaw/puzzle.tsx"]
+    "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "archive/game/jigsaw/puzzle.tsx"]
 }
