@@ -3,7 +3,7 @@ import CheckLatest from './components/CheckLatest';
 
 const Newsletters = () => {
     return (
-        <div className="h-screen w-full bg-blue-100 flex flex-col items-center justify-center">
+        <div className="h-screen w-full overflow-scroll bg-blue-100 flex flex-col items-center justify-center">
             <CheckLatest />
             <CheckArchive />
         </div>
